@@ -1,0 +1,4 @@
+C:\Users\Muhamed\Documents\Fax\VVS\VVS-Zadaca2-GrupaRS3-EMM-master\VVS-Zadaca2-GrupaRS3-EMM-master\Tinder.ba\Unit Testovi\obj\Release\netcoreapp3.1\Unit Testovi.csprojAssemblyReference.cache
+C:\Users\Muhamed\Documents\Fax\VVS\VVS-Zadaca2-GrupaRS3-EMM-master\VVS-Zadaca2-GrupaRS3-EMM-master\Tinder.ba\Unit Testovi\obj\Release\netcoreapp3.1\Unit Testovi.AssemblyInfoInputs.cache
+C:\Users\Muhamed\Documents\Fax\VVS\VVS-Zadaca2-GrupaRS3-EMM-master\VVS-Zadaca2-GrupaRS3-EMM-master\Tinder.ba\Unit Testovi\obj\Release\netcoreapp3.1\Unit Testovi.AssemblyInfo.cs
+C:\Users\Muhamed\Documents\Fax\VVS\VVS-Zadaca2-GrupaRS3-EMM-master\VVS-Zadaca2-GrupaRS3-EMM-master\Tinder.ba\Unit Testovi\obj\Release\netcoreapp3.1\Unit Testovi.csproj.CoreCompileInputs.cache
