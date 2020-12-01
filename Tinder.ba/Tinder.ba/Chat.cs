@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Tinder.ba
 {
@@ -80,7 +81,22 @@ namespace Tinder.ba
         /// <returns></returns>
         public List<Poruka> DajSvePorukeOdKorisnika(Korisnik k)
         {
-            throw new NotImplementedException();
+            List<Poruka> listaPoruka= new List<Poruka>();
+            foreach(Poruka p in this.Poruke)
+            {
+                if (p.Posiljalac == k)
+                {
+                    listaPoruka.Add(p);
+                }
+            }
+
+            if (listaPoruka.Count() == 0 || listaPoruka==null)
+            {
+                    throw new ApplicationException("Nema poruka");
+            }
+
+
+            return listaPoruka;
         }
 
         #endregion
