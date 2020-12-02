@@ -12,7 +12,7 @@ namespace Tinder.ba
     {
         public string DajUtisak()
         {
-            throw new NotImplementedException();
+            return "Pozitivan";
         }
     }
 }

@@ -148,9 +148,18 @@ namespace Tinder.ba
         /// Željena lokacija se postavlja na Mostar za sve gradove iz Hercegovine, a na Banja Luku za sve gradove
         /// iz Bosne.
         /// </summary>
-        public void RazvediSe()
+        public void RazvediSe()//Funkcionalnost uradila Elvira Alic
         {
-            throw new NotImplementedException();
+            zeljeniMinGodina = godine-4;
+            zeljeniMaxGodina = godine+4;
+            if (lokacija == Lokacija.Mostar || lokacija == Lokacija.Trebinje)
+            {
+                zeljenaLokacija = Lokacija.Mostar;
+            }
+            else
+                zeljenaLokacija = Lokacija.Banja_Luka;
+
+
         }
 
         #endregion

@@ -17,7 +17,7 @@ namespace Unit_Testovi
             Korisnik k2 = new Korisnik("user2", "user2*+", Lokacija.Sarajevo, Lokacija.Sarajevo, 20, false);
 
             Chat chat = new Chat(k1, k2);
-            chat.Poruke.Add(new Poruka(k1, k2, "volim te, slobodan sam i slobodna si! hoću ljubav!"));
+            chat.Poruke.Add(new Poruka(k1, k2, "volim te, slobodan sam i slobodna si! hoću ljubav !"));
             IRecenzija r = new Recenzija();
 
             Tinder.ba.Tinder t = new Tinder.ba.Tinder();

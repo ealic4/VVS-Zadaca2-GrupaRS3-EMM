@@ -89,9 +89,27 @@ namespace Tinder.ba
         /// i ukoliko se godine k1 nalaze između minimalnih i maksimalnih željenih godina k2 i obrnuto.
         /// </summary>
         /// <returns></returns>
-        public List<Tuple<Korisnik, Korisnik>> DajSveKompatibilneKorisnike()
+        public List<Tuple<Korisnik, Korisnik>> DajSveKompatibilneKorisnike()//Funkconalnost implementirao Mirnes Patkovic
         {
-            throw new NotImplementedException();
+            List<Tuple<Korisnik, Korisnik>> parovi = new List<Tuple<Korisnik, Korisnik>>();
+
+            for (int i = 0; i < korisnici.Count; i++)
+            {
+                for (int j = i + 1; j < korisnici.Count; j++)
+                    if (korisnici[i].Godine >= korisnici[j].ZeljeniMinGodina && korisnici[i].Godine <= korisnici[j].ZeljeniMaxGodina)
+                    {
+                        if (korisnici[i].Lokacija == korisnici[j].ZeljenaLokacija)
+                        {
+                            parovi.Add(new Tuple<Korisnik, Korisnik>(korisnici[i], korisnici[j]));
+                        }
+                    }
+            }
+
+
+            if (parovi.Count != 0)
+                return parovi;
+
+            throw new Exception("Prazna lista");
         }
 
         public bool DaLiJeSpajanjeUspjesno(Chat c, IRecenzija r)
@@ -109,7 +127,21 @@ namespace Tinder.ba
 
         public int PotencijalChata(Chat c)
         {
-            throw new NotImplementedException();
+            List<Poruka> Poruke = c.Poruke;
+            if (Poruke == null)
+            {
+                return 0;
+            }
+            if (c.GetType() == typeof(GrupniChat) )
+            {
+                throw new InvalidOperationException("Neprihvatljiv je grupn cat");
+            }
+            int sumaPotencijala=0;
+            foreach(Poruka p in Poruke)
+            {
+                sumaPotencijala += p.IzračunajPotencijalPoruke();
+            }
+            return sumaPotencijala;
         }
         #endregion
     }

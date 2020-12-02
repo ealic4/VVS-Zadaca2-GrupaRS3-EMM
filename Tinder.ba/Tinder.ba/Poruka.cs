@@ -60,8 +60,34 @@ namespace Tinder.ba
         /// Ukoliko poruka sadrži riječi "volim", "ljubav", "slobodan", "slobodna" ili "hoću" potencijal se povećava za 20 po prisutnoj riječi.
         /// </summary>
         /// <returns></returns>
-        public int IzračunajPotencijalPoruke()
+        public int IzračunajPotencijalPoruke()//Funkcionalnost uradio Mirnes Patkovic
         {
+            String poruka = Sadrzaj;
+
+            String[] rijeci = poruka.Split(new char[] { ',', ' ', '.' });
+
+            int potencijal = 0;
+
+            for (int i = 0; i < rijeci.Length; i++)
+            {
+                String rijec = rijeci[i];
+
+                if (rijec.Equals("bježi") || rijec.Equals("neću") || rijec.Equals("oženjen") || rijec.Equals("neistina"))
+                {
+                    if (potencijal != 0)
+                        potencijal -= 20;
+                }
+                else if (rijec.Equals("volim") || rijec.Equals("ljubav") || rijec.Equals("slobodan") || rijec.Equals("slobodna") || rijec.Equals("hoću"))
+                {
+                    if (potencijal != 100)
+                        potencijal += 20;
+                }
+
+            }
+
+            return potencijal;
+
+
             throw new NotImplementedException();
         }
 
